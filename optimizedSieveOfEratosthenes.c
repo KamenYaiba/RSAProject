@@ -10,7 +10,7 @@ void printPrimes(int limit)
     for(int i = 0; i < arrayLen; i++)
         isPrime[i] = true;
 
-    int sqrtLimit = sqrt(limit);
+    double sqrtLimit = sqrt(limit);
 
     for(int i = 3; i < limit; i+=2)
     {
@@ -19,7 +19,7 @@ void printPrimes(int limit)
         {
             if(j > i)
                 break;
-            if((product = i * j) < limit)
+            if((product = i * j) <= limit)
                 isPrime[(product-1)/2] = false;
         }
     }
