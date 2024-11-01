@@ -1,4 +1,3 @@
-#include <stdio.h>
 
 void encrypt(unsigned long long N, unsigned long long E, unsigned long long message[], int len)
 {
@@ -25,23 +24,13 @@ unsigned long long optimizedPow(unsigned long long base, unsigned long long exp)
 
     while(exp)
     {
-        if(!(exp & 1))
-        {
-            exp /= 2;
-            res *= res;
-        }
-        else
-        {
+        if(exp & 1)
             res *= base;
-            exp--;
-        }
+
+        base = base * base;
+        exp = exp / 2;
     }
 
     return res;
 }
 
-
-int main()
-{
-    printf("%u", optimizedPow(2, 5));
-}
