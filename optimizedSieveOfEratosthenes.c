@@ -2,13 +2,15 @@
 #include <math.h>
 #include <stdbool.h>
 
+
 //the function skips 2
 void printPrimes(int limit)
 {
     int arrayLen = limit/2;
     bool isPrime[arrayLen];
-    for(int i = 0; i < arrayLen; i++)
+    for(int i = 1; i < arrayLen; i++)
         isPrime[i] = true;
+    isPrime[0] = false; // 1 is not prime
 
     double sqrtLimit = sqrt(limit);
 
