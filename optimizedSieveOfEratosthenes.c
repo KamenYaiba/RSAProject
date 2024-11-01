@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdbool.h>
+#include <stdlib.h>
+
 
 
 //the function skips 2
 void printPrimes(int limit)
 {
     int arrayLen = limit/2;
-    bool isPrime[arrayLen];
+    bool *isPrime = malloc(arrayLen * sizeof(bool));
     for(int i = 1; i < arrayLen; i++)
         isPrime[i] = true;
     isPrime[0] = false; // 1 is not prime
