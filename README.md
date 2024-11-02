@@ -1,1 +1,1 @@
-# This repository contains tools useful in RSA encryption.
+# This repository contains tools useful to learn RSA encryption.
